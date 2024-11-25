@@ -1,0 +1,76 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.geral{
+    background: #c2c2c2;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #ff0000;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background: #c2c2c2;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgb(27, 27, 27);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+
+/* nomes do cabeçario ex:inicio */
+nav ul li a {
+    text-decoration: none;
+    color: #030303;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+/* cor do cabeçario quando passar o mouse ex:inicio */
+nav ul li a:hover {
+    color: #0cf876;
+}
+
+
+/* Estilo do hero(fundo) */
+.hero {
+    background: url('img/land.avif') no-repeat center center/cover;
+    height: 400px; 
+    
+}
+
+ /* cor do agente */
+.btn-agende {
+    background: rgba(238, 195, 56, 0.781);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 47%;
+ 
+}
+.btn-agende a{
+ text-decoration: none;
+ color: white;
+}
+
+.btn-agende:hover {
+    background: #65e012;
+}
+
+
