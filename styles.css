@@ -53,12 +53,12 @@ nav ul li a:hover {
 
  /* cor do agente */
 .btn-agende {
-    background: rgba(247, 200, 47, 0.699);
-    color: #fff;
+    background: rgba(168, 134, 22, 0.89);
+    color: #000000;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 40%;
+    border-radius: 45%;
     cursor: pointer;
     transition: background 0.3s;
     margin-left: 47%;
@@ -66,7 +66,7 @@ nav ul li a:hover {
 }
 .btn-agende a{
  text-decoration: none;
- color: white;
+ color: rgb(2, 2, 2);
 }
 
 .btn-agende:hover {
@@ -111,19 +111,6 @@ nav ul li a:hover {
 
 .next {
     right: 10px;
-}
-
-.destaque{
-    border: 2px solid rgb(255, 0, 0);
-    border-radius: 40%;
-    padding: 8px 18px;
-    font-weight: bold;
-    color: white;
-}
-.destaque a:hover{
-    background-color: rgb(214, 20, 20);
-    color: black;
-    border-color: red;
 }
 
 
