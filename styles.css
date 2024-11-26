@@ -40,25 +40,25 @@ nav ul li a {
 }
 /* cor do cabeçario quando passar o mouse ex:inicio */
 nav ul li a:hover {
-    color: #0cf876;
+    color: #f81c0c;
 }
 
 
 /* Estilo do hero(fundo) */
-.hero {
-    background: url('img/land.avif') no-repeat center center/cover;
-    height: 400px; 
+.hero img{
+   
+   width:100%;
     
 }
 
  /* cor do agente */
 .btn-agende {
-    background: rgba(238, 195, 56, 0.781);
+    background: rgba(247, 200, 47, 0.699);
     color: #fff;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 40%;
     cursor: pointer;
     transition: background 0.3s;
     margin-left: 47%;
@@ -70,7 +70,60 @@ nav ul li a:hover {
 }
 
 .btn-agende:hover {
-    background: #65e012;
+    background: #e01212;
+}
+
+
+/* inicial do carrosel Estilos básicos para o carrossel */
+.carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Tamanho máximo do carrossel */
+    margin: auto;
+    overflow: hidden;
+   
+}
+
+.carrossel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    width: 100%;
+    height: auto;
+}
+
+.carrossel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.destaque{
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 40%;
+    padding: 8px 18px;
+    font-weight: bold;
+    color: white;
+}
+.destaque a:hover{
+    background-color: rgb(214, 20, 20);
+    color: black;
+    border-color: red;
 }
 
 

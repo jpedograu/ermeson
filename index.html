@@ -8,18 +8,53 @@
 </head>
 <body>
     <div class="geral">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="menu/trabalhos.html">Trabalhos</a></li>
-                <li><a href="menu/contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="inicio" class="hero">
-    </div> 
-    <button class="btn-agende"><a href="#">Agende</a></button>
-</div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="menu/trabalhos.html">Trabalhos</a></li>
+                    <li><a href="menu/contato.html">Contato</a></li>
+                    <li><a href="menu/cagendamento.html" class="destaque">Agende</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="inicio" class="hero">
+            <img src="img/land.avif" >
+        </div> 
+        <button class="btn-agende"><a href="#">Agende</a></button>
+   
+
+        <!-- Carrossel -->
+        <div class="carrossel">
+            <div class="carrossel-images">
+                <img src="img/land2.jpeg" alt="Imagem 1">
+                <img src="img/test.webp" alt="Imagem 2">
+                <img src="img/tland3.jpeg" alt="Imagem 3">
+            </div>
+            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+        </div>
+        <script>
+            let slideIndex = 0;
+    
+            function mudarSlide(n) {
+                const imagens = document.querySelectorAll('.carrossel img');
+                slideIndex += n;
+    
+                if (slideIndex < 0) {
+                    slideIndex = imagens.length - 1;
+                }
+                if (slideIndex >= imagens.length) {
+                    slideIndex = 0;
+                }
+    
+                // Mover o carrossel para a imagem correta
+                const carrosselImages = document.querySelector('.carrossel-images');
+                carrosselImages.style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+        </script>
+       
+
+    </div>
 </body>
-</html> 
+</html>
