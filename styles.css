@@ -1,116 +1,61 @@
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  /* Estilos para telas menores que 480px */
+  @media (max-width: 769px) and (max-width: 1200px){
+    body {
+        font-size: 18px;
+      padding: 10px; /* Ajuste o padding em telas muito pequenas */
+    }
+  }
+
+  @media (max-width: 1201px) {
+    body {
+      padding: 30px; /* Ajuste o padding em telas muito pequenas */
+      font-size: 20px;
+    }
+  }
+  
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.geral{
-    background: #c2c2c2;
-}
+
 body {
-    font-family: Arial, sans-serif;
-    color: #ff0000;
+    background-image: url("img/fundo.png");
+    background-size: cover;
+    background-repeat: no-repeat;     
+    width: 300px;
+    height: 300px;
 }
 
-/* Estilo do cabeçalho */
-header {
-    background: #c2c2c2;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgb(27, 27, 27);
-}
+    
 
-nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin-right: 20px;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-
-/* nomes do cabeçario ex:inicio */
-nav ul li a {
+header a{
     text-decoration: none;
-    color: #030303;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-/* cor do cabeçario quando passar o mouse ex:inicio */
-nav ul li a:hover {
-    color: #f81c0c;
-}
-
-
-/* Estilo do hero(fundo) */
-.hero img{
-   
-   width:100%;
+    color: rgb(247, 242, 242);
     
 }
-
- /* cor do agente */
-.btn-agende {
-    background: rgba(168, 134, 22, 0.89);
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 45%;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-left: 47%;
- 
+header{
+    width: 1600px;
+    height: 50px;
+    background-color: rgb(97, 95, 97);
+    
 }
-.btn-agende a{
- text-decoration: none;
- color: rgb(2, 2, 2);
+header nav ul{
+   display: flex;
+   list-style: none;
+   text-align: center;
+   gap: 40px;
+   justify-content: center;
+    align-items: center;
+
 }
-
-.btn-agende:hover {
-    background: #e01212;
-}
-
-
-/* inicial do carrosel Estilos básicos para o carrossel */
-.carrossel {
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* Tamanho máximo do carrossel */
-    margin: auto;
-    overflow: hidden;
-   
-}
-
-.carrossel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carrossel img {
-    width: 100%;
-    height: auto;
-}
-
-.carrossel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-
