@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia X</title>
+    <link rel="stylesheet" href="css2.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Carrossel */
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;      /* Faz a imagem ocupar toda a largura do slide */
+            height: 100%;     /* Faz a imagem ocupar toda a altura do slide */
+            object-fit: cover; /* Ajusta a imagem sem distorção, mantendo a proporção */
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;  /* Cor das setas */
+            font-size: 30px;  /* Tamanho das setas */
+            z-index: 10;  /* Para garantir que as setas fiquem acima das imagens */
+        }
+
+        .swiper-button-next {
+            right: 10px;
+        }
+
+        .swiper-button-prev {
+            left: 10px;
+        }
+
+        /* Seção de Trabalhos */
+        .trabalhos {
+            padding: 50px 0;
+            background: #f9f9f9;
+        }
+
+        .trabalhos h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .trabalhos .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .trabalhos .galeria .item {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .trabalhos .galeria .item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .trabalhos .galeria .item h3 {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .trabalhos .galeria .item {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .trabalhos .galeria .item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            header nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            .swiper-container {
+                height: 300px;  /* Reduz a altura do carrossel em telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav ul li {
+                margin-right: 10px;
+            }
+
+            .swiper-button-next, .swiper-button-prev {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="#agendamento">Agendamento</a></li>
+                <li><a href="#horarios">Horários</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <h1>Bem-vindo à Barbearia X</h1>
+        <p>Cortes e serviços exclusivos para você!</p>
+    </section>
+
+
+     <!-- Carrossel -->
+     <section class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img1.jpg" alt="Imagem 1"></div>
+            <div class="swiper-slide"><img src="img2.jpg" alt="Imagem 2"></div>
+            <div class="swiper-slide"><img src="img3.jpg" alt="Imagem 3"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,  // Para que o carrossel seja cíclico
+            autoplay: {
+                delay: 3000,  // Tempo de transição entre as imagens
+                disableOnInteraction: false,  // Continua o autoplay após a interação do usuário
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',  // A seta para o próximo slide
+                prevEl: '.swiper-button-prev',  // A seta para o slide anterior
+            },
+        });
+    </script>
+
+<section id="trabalhos" class="trabalhos">
+    <h2>Nossos Trabalhos</h2>
+    <div class="galeria">
+        <!-- Corte Degradê -->
+        <div class="item">
+            <img src="corte-degrade.jpg" alt="Corte Degradê">
+            <h3>Corte Degradê</h3>
+        </div>
+        <!-- Corte Social -->
+        <div class="item">
+            <img src="corte-social.jpg" alt="Corte Social">
+            <h3>Corte Social</h3>
+        </div>
+        <!-- Corte Moderno -->
+        <div class="item">
+            <img src="corte-moderno.jpg" alt="Corte Moderno">
+            <h3>Corte Moderno</h3>
+        </div>
+        <!-- Corte Low Fade -->
+        <div class="item">
+            <img src="low-fade.jpg" alt="Corte Low Fade">
+            <h3>Low Fade</h3>
+        </div>
+        <!-- Corte High Fade -->
+        <div class="item">
+            <img src="high-fade.jpg" alt="Corte High Fade">
+            <h3>High Fade</h3>
+        </div>
+        <!-- Corte Undercut -->
+        <div class="item">
+            <img src="undercut.jpg" alt="Corte Undercut">
+            <h3>Undercut</h3>
+        </div>
+        <!-- Corte Pompadour -->
+        <div class="item">
+            <img src="pompadour.jpg" alt="Corte Pompadour">
+            <h3>Pompadour</h3>
+        </div>
+        <!-- Corte com Design -->
+        <div class="item">
+            <img src="corte-design.jpg" alt="Corte com Design">
+            <h3>Corte com Design</h3>
+        </div>
+        <!-- Corte Executivo -->
+        <div class="item">
+            <img src="executivo.jpg" alt="Corte Executivo">
+            <h3>Corte Executivo</h3>
+        </div>
+    </div>
+</section>
+
+           
+       
+        </div>
+    </section>
+
+    <section id="agendamento" class="agendamento">
+        <h2>Agende seu Corte</h2>
+        <form action="agendar.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+
+    <section id="horarios" class="horarios">
+        <h2>Horários Disponíveis</h2>
+        <ul>
+            <li>Segunda - Sexta: 09:00 - 18:00</li>
+            <li>Sábado: 09:00 - 15:00</li>
+            <li>Domingo: Fechado</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Barbearia X | Todos os direitos reservados</p>
+    </footer>
+
+   
+</body>
+</html>

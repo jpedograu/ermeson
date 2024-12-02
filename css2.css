@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home {
+    background: #333;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.trabalhos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.swiper-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.agendamento {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.agendamento form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.agendamento label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.agendamento input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.agendamento button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.agendamento button:hover {
+    background-color: #444;
+}
+
+.horarios {
+    background: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.horarios ul {
+    list-style-type: none;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+  /* Estilo para o carrossel */
+  .swiper-button-next, .swiper-button-prev {
+    color: #fff;  /* Cor das setas */
+    font-size: 30px;  /* Tamanho das setas */
+    z-index: 10;  /* Para garantir que as setas fiquem acima das imagens */
+}
+
+.swiper-button-next {
+    right: 10px;  /* Distância do lado direito */
+}
+
+.swiper-button-prev {
+    left: 10px;  /* Distância do lado esquerdo */
+}
+
+/* Estilos para a galeria de trabalhos */
+.trabalhos {
+    padding: 50px 0;
+    background: #f9f9f9;
+}
+
+.trabalhos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.trabalhos .galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trabalhos .galeria .item {
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trabalhos .galeria .item img {
+    width: 100%;
+    height: auto;
+}
+
+.trabalhos .galeria .item h3 {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .trabalhos .galeria .item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .trabalhos .galeria .item {
+        width: 100%;
+    }
+}
+
