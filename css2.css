@@ -4,6 +4,33 @@
     box-sizing: border-box;
 }
 
+/* Responsividade */
+@media (max-width: 100%) {
+    .trabalhos .galeria .item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .trabalhos .galeria .item {
+        width: 100%;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 100%) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-social {
+        margin-bottom: 15px;
+    }
+}
+    
+
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
@@ -193,18 +220,7 @@ nav ul li a {
     margin: 0;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .trabalhos .galeria .item {
-        width: 45%;
-    }
-}
 
-@media (max-width: 480px) {
-    .trabalhos .galeria .item {
-        width: 100%;
-    }
-}
 section {
     display: inline;
 }
@@ -277,19 +293,7 @@ footer {
     text-align: center;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .footer-logo,
-    .footer-social {
-        margin-bottom: 15px;
-    }
-}
-    
 
    header nav ul li {
             display: inline;
