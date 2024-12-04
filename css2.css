@@ -4,33 +4,39 @@
     box-sizing: border-box;
 }
 
-/* Responsividade */
-@media (max-width: 100%) {
-    .trabalhos .galeria .item {
-        width: 45%;
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-@media (max-width: 480px) {
-    .trabalhos .galeria .item {
-        width: 100%;
+    .galeria {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-/* Responsividade */
-@media (max-width: 100%) {
+    .item {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+    .swiper-container {
+        height: 200px;
+    }
+
     .footer-container {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-logo,
-    .footer-social {
-        margin-bottom: 15px;
+        align-items: center;
     }
 }
-    
 
+@media screen and (max-width: 480px) {
+    .home h1 {
+        font-size: 2em;
+    }
+    
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #000000;
